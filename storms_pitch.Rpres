@@ -1,0 +1,29 @@
+North Atlantic Storm Tracks
+========================================================
+author: Refik Türkeli
+date: 3 July 2017
+autosize: true
+
+```{r include=FALSE}
+library(dplyr)
+```
+
+Introduction
+========================================================
+
+The data used is a subset of the NOAA Atlantic hurricane database best track data, http://www.nhc.noaa.gov/data/#hurdat. The data includes the positions and attributes of 198 tropical storms, measured every six hours during the lifetime of a storm.
+
+```{r}
+head(storms)
+```
+
+Data Product
+========================================================
+
+Shiny application for exploring the data can be found here: 
+
+- [https://refik.shinyapps.io/dpw4/](https://refik.shinyapps.io/dpw4/)
+
+Source code for the application and these slides are also here:
+
+- []()
