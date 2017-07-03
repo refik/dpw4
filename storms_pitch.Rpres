@@ -11,13 +11,19 @@ library(dplyr)
 Introduction
 ========================================================
 
-The data used is a subset of the NOAA Atlantic hurricane database best track data, http://www.nhc.noaa.gov/data/#hurdat. The data includes the positions and attributes of 198 tropical storms, measured every six hours during the lifetime of a storm.
+The data used is a subset of the NOAA Atlantic hurricane database best track data. The data includes the positions and attributes of 198 tropical storms, measured every six hours during the lifetime of a storm.
 
+The variable names of the data are:
 ```{r}
-head(storms)
+names(storms)
 ```
 
-Data Product
+The number of observations are:
+```{r}
+nrow(storms)
+```
+
+Data Products
 ========================================================
 
 Shiny application for exploring the data can be found here: 
@@ -26,4 +32,21 @@ Shiny application for exploring the data can be found here:
 
 Source code for the application and these slides are also here:
 
-- []()
+- [https://github.com/refik/dpw4](https://github.com/refik/dpw4)
+
+Shiny Application
+========================================================
+
+Shiny application for viewing the data consists of a select box for filtering
+the name of the storm, a map for displaying the data tracks and a data table
+for showing the details of the track. Selecting different storm name from the
+input updates the map and data shown. Full application looks like this:
+
+![Shiny Application](shiny.png)
+
+Histogram of Data Points by Year
+========================================================
+
+```{r}
+hist(storms$year, xlab = "Year", ylab = "Data Frequency", main = "Years of Data Collected")
+```
